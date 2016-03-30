@@ -4,7 +4,8 @@
     background-color: var(--background-color);
     border-radius: 5px;
     border: 1px solid #e0e0e0;
-    margin: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     padding: 5px;
     display: table;
     color: var(--accent-color);
