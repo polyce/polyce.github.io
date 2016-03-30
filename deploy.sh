@@ -3,6 +3,6 @@
 pub get
 pub build
 
-git add build/web/*
+git submodule foreach 'git add .'
 git commit -am "Build"
 git push --recurse-submodules=on-demand
