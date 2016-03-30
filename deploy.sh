@@ -4,5 +4,5 @@ pub get
 pub build
 
 git add build/web
-git commit -m "Build"
+git commit -am "Build"
 git push
