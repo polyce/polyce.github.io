@@ -5,4 +5,4 @@ pub build
 
 git add build/web
 git commit -am "Build"
-git push
+git push --recurse-submodules=on-demand
