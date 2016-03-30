@@ -1,0 +1,11 @@
+:host {
+    font-family: 'Roboto', 'Noto', sans-serif;
+    font-weight: 300;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    margin: 5px;
+    padding: 5px;
+    display: table;
+    color: var(--accent-color);
+}

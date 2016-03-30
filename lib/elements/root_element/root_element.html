@@ -1,0 +1,17 @@
+<dom-module id="root-element">
+    <link rel="import" type="css" href="root_element.css">
+    <style include="material-theme"></style>
+    <template>
+        <!-- local DOM for your element -->
+        <paper-header-panel class="flex" mode="waterfall" style="z-index: 0">
+            <paper-toolbar>
+                <span class="title">{{selected}}</span>
+                <paper-item class="menu-item" on-click="goToHome">Getting Started</paper-item>
+                <paper-item class="menu-item" on-click="goToApi">Api</paper-item>
+            </paper-toolbar>
+            <div class="content">
+                <polymer-app-router class="flex" selected="{{selected}}" pages="{{pages}}"></polymer-app-router>
+            </div>
+        </paper-header-panel>
+    </template>
+</dom-module>

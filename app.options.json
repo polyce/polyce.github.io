@@ -1,0 +1,7 @@
+{
+  "elements": "lib/elements",
+  "routes_elements": "lib/routes_elements",
+  "services": "lib/services",
+  "models": "lib/models",
+  "behaviors": "lib/behaviors"
+}

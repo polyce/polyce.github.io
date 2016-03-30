@@ -1,0 +1,30 @@
+<dom-module id="home-route">
+    <link rel="import" type="css" href="home_route.css">
+    <template>
+        <div class="layout vertical center-center">
+            <paper-card heading="Polyce" style="margin-top: 24px;">
+                <div class="card-content">
+
+                </div>
+            </paper-card>
+            <paper-card heading="Getting Started">
+                <div class="layout vertical card-content">
+                    <h3><span class="mark-1"></span>Install Command Line Interface</h3>
+                    <insert-code>pub global activate polyce</insert-code>
+                    <h3><span class="mark-1"></span>Create your Application</h3>
+                    <insert-code>polyce app my_application</insert-code>
+                    <insert-code>cd my_application && pub serve</insert-code>
+                    <p>Congrats ! You created a Polymer application implementing Material Design.<br/>
+                        Now you can use Polyce tools to help you in the development of your application.</p>
+                    <h4><span class="mark-2"></span>Create a route and an element</h4>
+                    <insert-code>polyce route AwesomeRoute awesome</insert-code>
+                    <p>This command create a new route-element and automatically added it to your project. You can see
+                        how routes are managed in the <span class="accent">root-element</span> (lib/elements/root_element).</p>
+                    <insert-code>polyce element my_element</insert-code>
+                    <p>This command a new polymer element, <span class="accent">my-element</span> can be directly use inside your route.</p>
+                    <h3><span class="mark-1"></span><span class="link" on-click="goToApi">More ...</span></h3>
+                </div>
+            </paper-card>
+        </div>
+    </template>
+</dom-module>

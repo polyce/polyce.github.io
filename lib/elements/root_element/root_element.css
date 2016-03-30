@@ -1,0 +1,27 @@
+:host {
+    display: block;
+    height: 100vh;
+}
+
+.title {
+    display: flex;
+    flex: 1;
+}
+
+/* Material Template */
+.content {
+    background-color: var(--background-color);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.menu-item {
+    cursor: pointer;
+}
+
+#nav {
+    border-right: 1px solid #e0e0e0;
+}
+
+/*********************/
