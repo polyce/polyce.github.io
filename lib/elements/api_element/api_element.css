@@ -1,0 +1,23 @@
+:host {
+    @apply(--layout-vertical);
+    @apply(--center);
+    font-family: 'Roboto', 'Noto', sans-serif;
+    font-weight: 300;
+}
+
+h4 {
+    -webkit-margin-before: 0.8em;
+    -webkit-margin-after: 0.8em;
+}
+
+h1, h2, h3, h4, h5 {
+    @apply(--layout-horizontal);
+    font-weight: 300;
+}
+
+.mark-1 {
+    margin-right: 8px;
+    width: 10px;
+    height: 25px;
+    background-color: var(--default-primary-color);
+}

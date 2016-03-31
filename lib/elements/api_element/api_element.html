@@ -1,0 +1,45 @@
+<dom-module id="api-element">
+    <link rel="import" type="css" href="api_element.css">
+    <template>
+        <paper-card heading="Element">
+            <div class="layout vertical card-content">
+                <insert-code>polyce element my-element</insert-code>
+                <p>Directory: lib/elements/my_element/</p>
+                <p>The created Element implement
+                    <insert-code no-margin>AutonotifyBehavior</insert-code>
+                    and
+                    <insert-code no-margin>Observable</insert-code>
+                    , so you can directly use the annotation
+                    <insert-code no-margin>@observable</insert-code>
+                    inside it.
+                </p>
+            </div>
+        </paper-card>
+        <paper-card heading="Code">
+            <div class="layout vertical card-content">
+                <h3><span class="mark-1"></span>Polymer Element with Autonitify and Observable</h3>
+                <insert-code>@PolymerRegister('my-element')<br/>
+                    class MyElement extends PolymerElement with AutonotifyBehavior, Observable { <br/>
+                    <blockquote>MyElement.created() : super.created();</blockquote>
+                    }
+                </insert-code>
+                <h3><span class="mark-1"></span>Properties</h3>
+                <insert-code>@observable @property String field</insert-code>
+                <insert-code>@observable @property List&lt;String&gt; = new ObservableList()</insert-code>
+                <h3><span class="mark-1"></span>Use function inside dom</h3>
+                <insert-code>@reflectable myFunction(event, detail) { <br/>
+                    <blockquote>window.alert(detail);</blockquote>
+                    }
+                </insert-code>
+                <insert-code>&lt;button on-click="myFunction"&gt;Click&lt;/button&gt;</insert-code>
+                <h3><span class="mark-1"></span>Listen Event</h3>
+                <insert-code>@Listen('tap') <br/>
+                    void regularTap(event, [_]) { <br/>
+                    <blockquote>window.alert('Thank you for tapping');</blockquote>
+                    }
+                </insert-code>
+            </div>
+        </paper-card>
+    </template>
+</dom-module>
+    

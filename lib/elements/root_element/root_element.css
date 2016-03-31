@@ -1,16 +1,17 @@
 :host {
     display: block;
     height: 100vh;
+    background-color: var(--background-color);
 }
 
 .title {
+    padding-left: 10px;
     display: flex;
     flex: 1;
 }
 
 /* Material Template */
 .content {
-    background-color: var(--background-color);
     height: 100%;
     width: 100%;
     position: absolute;

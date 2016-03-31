@@ -1,0 +1,51 @@
+<dom-module id="api-route">
+    <link rel="import" type="css" href="api_route.css">
+    <template>
+        <paper-card heading="Route">
+            <div class="layout vertical card-content">
+                <insert-code>polyce route AwesomeRoute path</insert-code>
+                <p>Directory: lib/routes_elements/awesome_route/</p>
+                <p>Create an Element implementing
+                    <insert-code no-margin>PolymerAppRouteBehavior</insert-code>
+                    behavior. The element registers his route the annotation
+                    <insert-code no-margin>@PolyceRoute</insert-code>
+                    on the class.
+                </p>
+                <h3><span class="mark-1"></span>How to use it</h3>
+                <p>
+                    You can create an element implementing the
+                    <insert-code no-margin>PolyceRouter</insert-code>
+                    to access to every route declared in your project. You can access to the property
+                    <insert-code no-margin>pages</insert-code>
+                    , it will give you a List of
+                    <insert-code no-margin>Page</insert-code>
+                    and you will have access to the name, the path and the element of the route. Then you can use
+                    <insert-code no-margin>polymer-app-router</insert-code>
+                    to display selected route. <br/>
+                    See
+                    <insert-code no-margin>root-element</insert-code>
+                    for working example.
+                </p>
+                <h3><span class="mark-1"></span>Navigation</h3>
+                <insert-code>PolyceRouter.goToName("AwesomeRoute");</insert-code>
+                <insert-code>PolyceRouter.goToDefault();</insert-code>
+            </div>
+        </paper-card>
+        <paper-card heading="Code">
+            <div class="layout vertical card-content">
+                <h3><span class="mark-1"></span>Definition of a PolyceRoute</h3>
+                <insert-code>@PolyceRoute("AwesomeRoute", "path", isDefault: false)<br/>
+                    @PolymerRegister('awesome-route')<br/>
+                    class AwesomeRoute extends PolymerElement
+                    with AutonotifyBehavior, Observable, PolymerAppRouteBehavior {<br/>
+                    <blockquote>AwesomeRoute.created() : super.created();</blockquote>
+                    <blockquote>enter(RouteEnterEvent event, [Map params]) {}</blockquote>
+                    }
+                </insert-code>
+                <p>The function
+                    <insert-code>enter</insert-code> is called by the router each time he enters in it.</p>
+            </div>
+        </paper-card>
+    </template>
+</dom-module>
+    

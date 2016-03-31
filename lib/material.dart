@@ -4,6 +4,7 @@ export 'package:polymer_elements/iron_flex_layout/classes/iron_flex_layout.dart'
 export 'package:polymer_elements/iron_icon.dart';
 export 'package:polymer_elements/iron_icons.dart';
 export 'package:polymer_elements/iron_media_query.dart';
+export 'package:polymer_elements/iron_pages.dart';
 export 'package:polymer_elements/neon_animated_pages.dart';
 export 'package:polymer_elements/paper_drawer_panel.dart';
 export 'package:polymer_elements/paper_header_panel.dart';
@@ -17,3 +18,4 @@ export 'package:polymer_elements/paper_toolbar.dart';
 export 'package:polymer_elements/paper_toast.dart';
 export "package:polymer_elements/paper_card.dart";
 export "package:polymer_elements/paper_material.dart";
+export "package:polymer_elements/paper_button.dart";

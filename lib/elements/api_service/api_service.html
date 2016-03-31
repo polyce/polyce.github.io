@@ -1,0 +1,52 @@
+<dom-module id="api-service">
+    <link rel="import" type="css" href="api_service.css">
+    <template>
+        <paper-card heading="PolyceService">
+            <div class="layout vertical card-content">
+                <insert-code>polyce service myService</insert-code>
+                <p>Directory: lib/services/</p>
+                <p>Provide an Angular like service, each service is instantiated when you launch the application. You
+                    can get the service by knowing his Type,
+                    <insert-code no-margin>Polyce.getService(MyService)</insert-code>
+                    .
+                    The
+                    <insert-code no-margin>PolyceService</insert-code>
+                    extends
+                    <insert-code no-margin>PolyceModel</insert-code>
+                    and is annotate with
+                    <insert-code no-margin>@serializable</insert-code>
+                    , so you can serialize the service has a model.
+                </p>
+                <h3><span class="mark-1"></span>HttpService</h3>
+                <p>Polyce comes with
+                    <insert-code>HttpService</insert-code>
+                    which provide basic http request with automatic deserialization
+                </p>
+                <insert-code>HttpService get http => Polyce.getService(HttpService); <br/>
+                    HttpResponse res = await http.get("/getUri/",
+                    headers: {'content-type': "application/json"},
+                    decodeType: MyPolyceModel); <br/>
+                    if (res.statusCode == 200) {
+                    <blockquote>MyPolyceModel model = res.convertedBody;</blockquote>
+                    }
+                </insert-code>
+            </div>
+        </paper-card>
+        <paper-card heading="Code">
+            <div class="layout vertical card-content">
+                <h3><span class="mark-1"></span>Service</h3>
+                <insert-code>@serializable<br/>
+                    @service<br/>
+                    class MyPolyceService extends PolyceService {
+                    <blockquote>@observable String foo = "bar";</blockquote>
+                    <blockquote>init() {
+                        <blockquote>print(this.toJson);</blockquote>
+                        }
+                    </blockquote>
+                    }
+                </insert-code>
+            </div>
+        </paper-card>
+    </template>
+</dom-module>
+    

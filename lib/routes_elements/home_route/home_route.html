@@ -2,9 +2,13 @@
     <link rel="import" type="css" href="home_route.css">
     <template>
         <div class="layout vertical center-center">
-            <paper-card heading="Polyce" style="margin-top: 24px;">
+            <paper-card heading="Polyce" style="margin-top: 50px;">
                 <div class="card-content">
-
+                    <p>Polyce provides tools to help for creating Polymer Application.</p>
+                    <p>Build on top of polymer, it comes white generator for <span class="link" on-click="goToApiElement">element</span>, <span
+                            class="link" on-click="goToApiBehavior">behavior</span> but also with <span class="link" on-click="goToApiService">service</span> like
+                        Angular, <span class="link" on-click="goToApiModel">model</span> with automatic serialization to JSON and <span
+                                class="link" on-click="goToApiRoute">route</span>.</p>
                 </div>
             </paper-card>
             <paper-card heading="Getting Started">
@@ -18,10 +22,12 @@
                         Now you can use Polyce tools to help you in the development of your application.</p>
                     <h4><span class="mark-2"></span>Create a route and an element</h4>
                     <insert-code>polyce route AwesomeRoute awesome</insert-code>
-                    <p>This command create a new route-element and automatically added it to your project. You can see
-                        how routes are managed in the <span class="accent">root-element</span> (lib/elements/root_element).</p>
+                    <p>This command creates a new route-element and automatically added it to your project. You can see
+                        how routes are managed in the <span class="accent">root-element</span>
+                        (lib/elements/root_element).</p>
                     <insert-code>polyce element my_element</insert-code>
-                    <p>This command a new polymer element, <span class="accent">my-element</span> can be directly use inside your route.</p>
+                    <p>This command create as new polymer element, <insert-code>my-element</insert-code> can be directly used
+                        inside your route.</p>
                     <h3><span class="mark-1"></span><span class="link" on-click="goToApi">More ...</span></h3>
                 </div>
             </paper-card>

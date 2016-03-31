@@ -4,5 +4,47 @@
     display: block;
     height: 100%;
     width: 100%;
+    @apply(--layout-vertical)
 }
-    
+
+h4 {
+    -webkit-margin-before: 0.8em;
+    -webkit-margin-after: 0.8em;
+}
+
+h1,h2,h3,h4,h5 {
+    @apply(--layout-horizontal);
+    font-weight: 300;
+}
+
+.mark-1 {
+    margin-right: 8px;
+    width: 10px;
+    height: 25px;
+    background-color: var(--default-primary-color);
+}
+
+.mark-2 {
+    margin-right: 8px;
+    width: 5px;
+    height: 20px;
+    background-color: var(--default-primary-color);
+}
+
+span.accent {
+    color: var(--accent-color);
+}
+
+.link {
+    color: var(--default-primary-color);
+    cursor: pointer;
+}
+
+.link:hover {
+    color: var(--accent-color);
+}
+
+iron-pages {
+    overflow-y: scroll;
+    height: 100%;
+}

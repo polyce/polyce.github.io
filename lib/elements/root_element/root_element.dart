@@ -12,6 +12,7 @@ class RootElement extends PolymerElement
   @observable
   @Property(observer: "pageChanged")
   String selected;
+
   @reflectable
   pageChanged(String value, String old) {
     if (value != null) {
@@ -21,15 +22,16 @@ class RootElement extends PolymerElement
 
   @reflectable
   void goToHome(MouseEvent event, [_]) {
-    event.stopPropagation();
-    event.preventDefault();
     PolyceRouter.goToDefault();
   }
 
   @reflectable
   void goToApi(MouseEvent event, [_]) {
-    event.stopPropagation();
-    event.preventDefault();
-    PolyceRouter.goToName("Api");
+    PolyceRouter.goToName("Api", parameters: {"tab": "element"});
+  }
+
+  @reflectable
+  void github(event, detail) {
+    window.open("https://github.com/polyce/polyce", "Polyce Githb", "_newtab");
   }
 }

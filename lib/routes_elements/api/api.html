@@ -1,7 +1,21 @@
-<dom-module id="api-route">
+<dom-module id="api-route-element">
     <link rel="import" type="css" href="api.css">
     <template>
-        <div class="layout vertical">
+        <paper-tabs attr-for-selected="name" selected="{{selected}}">
+            <paper-tab name="element">Element</paper-tab>
+            <paper-tab name="route">Route</paper-tab>
+            <paper-tab name="behavior">Behavior</paper-tab>
+            <paper-tab name="model">Model</paper-tab>
+            <paper-tab name="service">Service</paper-tab>
+        </paper-tabs>
+        <div class="layout vertical flex">
+            <iron-pages attr-for-selected="name" selected="{{selected}}">
+                <api-element name="element"></api-element>
+                <api-route name="route"></api-route>
+                <api-behavior name="behavior"></api-behavior>
+                <api-model name="model"></api-model>
+                <api-service name="service"></api-service>
+            </iron-pages>
         </div>
     </template>
 </dom-module>

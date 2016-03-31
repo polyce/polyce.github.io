@@ -3,8 +3,9 @@
     <style include="material-theme"></style>
     <template>
         <!-- local DOM for your element -->
-        <paper-header-panel class="flex" mode="waterfall" style="z-index: 0">
+        <paper-header-panel class="flex" style="z-index: 0">
             <paper-toolbar>
+                <paper-icon-button on-click="github" src="github.png"></paper-icon-button>
                 <span class="title">{{selected}}</span>
                 <paper-item class="menu-item" on-click="goToHome">Getting Started</paper-item>
                 <paper-item class="menu-item" on-click="goToApi">Api</paper-item>

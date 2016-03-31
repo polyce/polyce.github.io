@@ -1,0 +1,41 @@
+<dom-module id="api-model">
+    <link rel="import" type="css" href="api_model.css">
+    <template>
+        <paper-card heading="PolyceModel">
+            <div class="layout vertical card-content">
+                <insert-code>polyce model myPolyceModel</insert-code>
+                <p>Directory: lib/models/</p>
+                <p>This generate a class extending
+                    <insert-code>PolyceModel</insert-code>
+                    and annoted by
+                    <insert-code>@serializable</insert-code>
+                    .
+                </p>
+                <h3><span class="mark-1"></span>Serialization (JSON)</h3>
+                <p>The class can be use in the dom and serialization function are provided, however, you need to
+                    annotate each attribute with
+                    <insert-code>@observable</insert-code>
+                    .
+                </p>
+                <insert-code>myModel.toJson</insert-code>
+                <insert-code>myModel.toMap</insert-code>
+                <h3><span class="mark-1"></span>Deserialization (JSON)</h3>
+                <insert-code>MyPolyceModel model = Polyce.decode(jsonString, MyPolyceModel);</insert-code>
+                <insert-code>List&lt;MyPolyceModel&gt; list = Polyce.decodeList(jsonList, MyPolyceModel);</insert-code>
+            </div>
+        </paper-card>
+        <paper-card heading="Code">
+            <div class="layout vertical card-content">
+                <h3><span class="mark-1"></span>Model</h3>
+                <insert-code>@serializable<br/>
+                    class MyPolyceModel extends PolyceModel { <br/>
+                    <blockquote>MyPolyceModel([this.field]);</blockquote>
+                    <blockquote>MyPolyceModel.create(this.field);</blockquote>
+                    <blockquote>@observable String field;</blockquote>
+                    }
+                </insert-code>
+            </div>
+        </paper-card>
+    </template>
+</dom-module>
+    

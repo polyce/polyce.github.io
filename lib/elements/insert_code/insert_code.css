@@ -7,6 +7,10 @@
     margin-bottom: 5px;
     margin-top: 5px;
     padding: 5px;
-    display: table;
-    color: var(--accent-color);
+    display: inline-table;
+    color: var(--default-primary-color);
+}
+
+:host[no-margin] {
+    margin: 0;
 }
